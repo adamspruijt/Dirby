@@ -1,0 +1,158 @@
+//  clearfix
+.PageListSelectHeader{
+	.clearfix();
+}
+
+.container {
+.clearfix();
+}
+
+.logo{
+	margin: 4px 1em 4px 0;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.align_left {
+	float: left;
+	margin: 0 1em 0.5em 0;
+}
+
+.align_right {
+	float: right;
+	margin: 0 0 0.5em 1em;
+}
+.align_center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.copy{
+	font-weight: bold;
+	color: @blueDarker;
+	text-shadow: 1px 1px 1px @blueLighter;
+	a{
+		color:  darken(@blueDarker, 3%);
+		&:hover{
+			color: @pink;
+		}
+	}
+	margin: 1.5em 0;
+	padding: 0;
+}
+.text_center{
+	text-align: center;
+}
+
+.fright{
+	float: right;
+}
+.fleft{
+	float: left;
+}
+
+#notices{
+	ul{
+		width: 100%;
+		margin: 12px 0 0 0 !important;
+		padding: 0 !important;
+		list-style: none;
+		li{
+			.listItemSpacing();
+			padding: 4px 6px;
+			font-weight: bold;
+			text-transform: uppercase;
+			&.success{
+				background: @success;
+				color: #fff;
+				font-size: 11px;
+				a{
+					color: darken(@successDark, 10%);
+					font-weight: bold;
+				}
+			}
+			&.error{
+				background: @error;
+				border-color: @errorDark;
+
+				color: #fff;
+				a{
+					color: darken(@errorDark, 10%);
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+
+.InputfieldMarkup .ui-state-highlight,
+.notes{
+	padding: 8px 8px;
+	display: block;
+	margin: 4px 0 12px 0;
+	border: 0;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 11px;
+	color: @grayDark;
+	background: @noticeLight;
+	.ui-icon{
+		float: left;
+		margin: -2px 8px 0 0;
+	}
+}
+.notes{
+	margin: 1em 0 0 0;
+}
+td .notes{
+	margin-bottom: 0.6em;
+}
+
+.InputfieldMarkup .ui-state-highlight{
+	margin: 4px 0;
+}
+
+
+.gravatar{
+	.box-shadow(0 1px 2px @blueDark);
+	display: inline-block;
+	vertical-align: middle;
+	padding: 2px;
+	margin-right: 1em ;
+	height: 48px;
+	width: 48px;
+	background: #fff;
+}
+.user-menu{
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+	margin: 10px 0;
+	vertical-align: middle;
+	
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 14px;
+	// text-shadow: 0 0 4px @blueDark;
+	a:hover{
+		color: @grayDark !important;
+
+	}
+}
+.user-name{
+	color: #fff;
+	text-shadow: 0 1px 1px @blueDark;
+	&:hover{
+	}
+}
+.user-logout{
+	color: @blueDarker;
+	font-size: 12px;
+}

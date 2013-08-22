@@ -1,0 +1,72 @@
+input{
+	vertical-align: middle;
+}
+input, select, textarea, label{
+	font-size: 12px;
+	max-width: 100%;
+}
+select{
+	height: 29px;
+}
+input, select, textarea {
+
+	margin: 1px 0 4px 0;
+	padding: 6px;
+
+	border: 0;
+	border-bottom: 3px solid #eee;
+}
+input:focus, textarea:focus,  select:focus{
+	background: #fff;
+	color: @grayDark;
+}
+input:invalid{
+	background: #fff;
+	color: @errorDark!important;
+	border-color: @error!important;
+}
+
+#ProcessPageEdit, .InputfieldWrapper{
+	list-style: none!important;
+}
+
+#ProcessPageSearchForm{
+	// position: absolute;
+	right: 12px;
+	float: none;
+	top: 0;
+	// border-right: 1px solid #fff;
+
+}
+
+input#ProcessPageSearchQuery{
+	margin: 0 !important;
+
+	float: right;
+	height: 26px;
+	font-size: 14px;
+	position: relative;
+	z-index: 20;
+	line-height: 26px;
+	.box-shadow( none);
+	outline: none;
+	border-color: @grayLight;
+	border: none;
+	border-right: 1px solid @grayLighter;
+	padding: 8px;
+	width: 400px;
+	text-align: right;
+	opacity: 1!important;
+	background: transparent;
+
+}
+
+input#ProcessPageSearchQuery:focus{
+	border-color: @blue;
+	margin: 0;
+	color: @grayDark;
+}
+
+.search.on .searchform{
+	display: block;
+}
