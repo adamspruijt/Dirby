@@ -70,8 +70,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 				<div id="header">
 					
 					<img width="170" class=" logo" src="<?php echo $config->urls->adminTemplates ?>styles/images/logo.png">
-					<h1><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
-			    	<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
+					
 				
 				</div>
 				<div class="nav-wrap">					
@@ -102,7 +101,13 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 		
 		
 		<div id="main">
-
+			<div id="main-header">
+				<div class="container">
+					<h1><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
+			    	<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
+				</div>
+			</div>
+			
 			<div id="bread">
 				<div class="container">
 					<ul id="breadcrumbs">
