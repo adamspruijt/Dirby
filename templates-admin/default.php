@@ -69,7 +69,7 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 			<div class="container">
 				<div id="header">
 					
-					<img width="170" class=" logo" src="<?php echo $config->urls->adminTemplates ?>styles/images/logo.png">
+					<img class=" logo" src="<?php echo $config->urls->adminTemplates ?>styles/images/logo.png">
 					
 				
 				</div>
@@ -83,13 +83,13 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 					<?php $gravatar = "http://www.gravatar.com/avatar/" . md5( strtolower( trim( $user->email ) ) ) . "?d=mm&s=50"; ?>
 					<?php if ($gravatar): ?>
 						<?php $edit = __("Edit Profile"); ?>
-						<?php if ($user->hasPermission('profile-edit')) echo "<a title='{$edit}' class='tooltip' href='{$config->urls->admin}profile/'>" ?>
-						<img class="gravatar" src="<?php echo $gravatar; ?>" alt="">
-						<?php if ($user->hasPermission('profile-edit')) echo "</a>" ?>
+						<div class="gravatar-wrapper clearfix">
+							<img class="gravatar" src="<?php echo $gravatar; ?>" alt="">
+						</div>
 					<?php endif ?>
 										
 					<div class="user-menu">
-						<?php if ($user->hasPermission('profile-edit')) echo "<a title='{$edit}' class='user-name tooltip' href='{$config->urls->admin}profile/'>{$user->name}</a>" ?><br>
+						<?php if ($user->hasPermission('profile-edit')) echo "<a class='user-name' href='{$config->urls->admin}profile/'>{$user->name}</a>" ?><br>
 						<a class="user-logout" href='<?php echo $config->urls->admin; ?>login/logout/'><?php echo __('logout', __FILE__); ?></a>
 					</div>
 				</div>
@@ -129,11 +129,11 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 			<div class="container">
 				
 			    <div id="content" class="fouc_fix">
-					<div class="container">
+					
 						<?php if($page->body) echo $page->body; ?>
 						<?php echo $content?>
 						<?php if($config->debug && $this->user->isSuperuser()) include($config->paths->adminTemplates . "debug.inc"); ?>
-					</div>
+					
 				</div>
 			</div>
 

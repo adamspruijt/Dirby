@@ -71,17 +71,17 @@ input#columnWidth{
 .ui-button.ui-state-default,
 .ui-button{
     margin: 0;
-    padding: 6px 12px!important;
+    padding: 1em 2em!important;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     // border-color: transparent!important;
-    background: @blue;
+    background: @base;
     color: #fff!important;
 }
 .InputfieldPageAdd .InputfieldPageAddButton > a:hover,
 .ui-button.ui-state-hover,
 .ui-button:hover{
-    background: @pink;
+    background: @orange;
 }
 .ui-button-text{
     padding: 0 !important;
@@ -91,7 +91,7 @@ input#columnWidth{
     opacity: 1;
 }
 .ui-button.ui-priority-secondary:hover{
-    background: @pink !important;
+    background: @orange !important;
 }
 .Inputfields .InputfieldSubmit, .Inputfields .InputfieldSubmit .ui-widget-content{
     display: block !important;
@@ -105,7 +105,7 @@ input#columnWidth{
 #submit_save_form_fields_copy,
 #Inputfield_submit,
 #Inputfield_submit_copy{
-    background: @success;
+    background: @green;
     color: #fff;
     text-transform: uppercase;
 }
@@ -117,7 +117,7 @@ input#columnWidth{
 #submit_save:hover,
 #Inputfield_submit_copy:hover,
 #Inputfield_submit:hover{
-    background: @successDark;
+    background: @greenDark;
 }
 
 
@@ -126,18 +126,18 @@ input#columnWidth{
 #_ProcessPageEditDelete,
 .PageListActionEmpty a,
 #_WireTabDelete{
-    color: @error!important;
+    color: @red!important;
 }
 #_ProcessPageEditDelete:hover,
 .PageListActionEmpty a:hover,
 #_WireTabDelete:hover{
-    color: @errorDark!important;
+    color: @redDark!important;
 }
 .PageListActionEmpty a:hover,
 a.on#_ProcessPageEditDelete,
 a.on#_WireTabDelete{
     color: #fff!important;
-    background: @error !important;
+    background: @red !important;
 }
 
 
@@ -202,7 +202,8 @@ a.on#_WireTabDelete{
     display: none !important;
 }
 .ui-widget-overlay{
-    background: #000;
+    background: #666;
+    opacity: 0.8;
     z-index: 10000 !important;
 }
 .ui-dialog-titlebar-close{
@@ -282,7 +283,7 @@ a.on#_WireTabDelete{
     position: absolute;
     z-index: 0;
     .ui-progressbar-value{
-        background: @success;
+        background: @green;
 
         margin: -1px 0 -1px -1px !important;
     }
@@ -327,7 +328,7 @@ a.on#_WireTabDelete{
             &.ui-state-default.ui-state-hover{
                 background: transparent!important;
                 a{
-                    color: @pink !important;
+                    color: @orange !important;
                 }
             }
             &.ui-state-default.ui-state-active{

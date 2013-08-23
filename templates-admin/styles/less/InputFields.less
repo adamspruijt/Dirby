@@ -20,96 +20,99 @@
 		clear: both;
 		margin-left: 0;
 	}
-	.ui-widget-content {
-		background: transparent;
-		.clearfix();
-	}
 }
 
 .Inputfield{
 	border: 0!important;
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 	clear: both;
+	background: #fff;
+	// padding: 1em;
 
 	input, select, textarea{
 		.box-sizing(border-box);
 		margin: 0;
 		padding: 6px;
-		border-bottom: 3px dashed @blue;
+		border: 3px dashed #ddd;
 	}
 	input:hover, select:hover, textarea:hover{
-		border-color: @success;
+		border-style: solid;
+		// border-color: @base;
 	}
 	input:focus, select:focus, textarea:focus{
-		border-color: @pink;
+		border-style: solid;
+
+		border-color: @green;
 	}
 
 	> label.ui-widget-header{
 		margin: 0;
+		padding: 1em;
 		display: block;
-	}
-	> label.ui-widget-header:hover{
-		// .ui-icon {background-image: url(jqueryui/images/ui-icons-white.png)!important; opacity: 1; }
+		height: 1.1em;
 
 	}
+
 	> .ui-widget-content {
-		padding: 12px 10px;
+		padding: 1em;
+		padding-top: 0;
 		border-top: 0;
 		position: relative;
+		background: #fff;
 	}
+	.PageListRoot{
+		padding-bottom: 0;
+		line-height: 29px;
+		.PageListSelectActionToggle{
+		    padding: 7px 8px!important;
+		    color: @grayDark!important;
+		    color: #fff!important;
+		    background: @base;
+		    border: 1px solid rgba(0,0,0,0.15);
+		    text-transform: uppercase;
+		    font-size: 11px;
+		    font-weight: bold;
+
+			&:hover{
+				
+				background: @orange;
+			}
+		}
+		> .PageList{
+			margin: 4px 0 0 0!important;
+		}
+	}
+
 }
 
 // delete state
 .InputfieldRepeaterDeletePending .ui-widget-header,
 .Inputfield > .ui-widget-header.ui-state-error{
-    color: @error!important;
-}
-
-
-// second level nested inputs
-.InputfieldFieldset,
-.InputfieldFieldsetOpen{
-	> .ui-widget-content{
-		padding-bottom: 0;
-	}
-
-}
-
-// second level nested inputs
-.InputfieldFieldset.Inputfield .Inputfields .Inputfield,
-.InputfieldFieldsetOpen.Inputfield .Inputfields .Inputfield{
-	.box-shadow(none);
-	> label.ui-widget-header{
-		color: @grayDark!important; 
-		&:hover{
-			color: #fff!important;
-		}
-		.ui-icon {background-image: url(jqueryui/images/ui-icons.png); }
-	}
+    color: @red!important;
 }
 
 
 
 .InputfieldStateCollapsed{
-	.box-shadow(none);
+	opacity: 0.4;
+	background: #ccc;
 	> label.ui-widget-header{
-		color: darken(@gray,22%)!important;
 		border-color: rgba(0,0,0,0.1);
 		.ui-icon {
 			background-image: url(jqueryui/images/ui-icons.png);
-			opacity: 0.7;
+			opacity: 1;
 		}
 	}
 }
-
-// BUTTON
-
-.InputfieldButton {
-	margin: 0 !important;
-	.ui-widget-content{
-		padding: 0 !important;
+.InputfieldStateCollapsed:hover{
+	opacity: 0.4;
+	> label.ui-widget-header{
+		color: #fff !important;
 	}
+	
+	background: @orange;
 }
+
 
 // FILE FIELD
 .InputfieldFileName{
@@ -121,7 +124,7 @@
 	padding: 0;
 }
 .InputfieldFileUpload{
-	padding: 10px 0 20px 0;
+	padding: 1em 0 2em 0;
 	position: static !important;
 	input{
 		.box-shadow(none);
@@ -154,16 +157,13 @@
 			opacity: 0.6;
 		}
 	}
-	.InputfieldFileValidExtensions{
-		font-size: 11px;
-		line-height: 20px;
-	
+	.InputfieldFileValidExtensions{	
 		color: @gray;
 	}
 }
 
 .ui-widget-content.ui-state-hover .AjaxUploadDropHere{
-	background: @success !important;
+	background: @green !important;
 	color: rgba(255,255,255,0.9) !important;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
 	.ui-icon.ui-icon-arrowreturnthick-1-s{
@@ -174,7 +174,7 @@
 .InputfieldFileList{
 	.InputfieldFile{
 		border: none !important;
-		background: #fff !important;
+		background: #eee !important;
 		// padding: 0.5em 0;
 		width: auto;
 		position: relative;
@@ -230,17 +230,15 @@
 				// white-space: nowrap;
 				font-size: 11px;
 			}
-			// &:hover .InputfieldFileStats{
-			// 	visibility: hidden;
-			// }
+
 			&.ui-state-hover{
-				background: @pink ;
+				// background:  ;
 			}
 			&.ui-state-highlight{
-				background: @notice !important;
+				background: @yellow !important;
 			}
 			&.ui-state-error{
-				background: @error !important;
+				background: @red !important;
 			}
 
 		}
@@ -290,7 +288,7 @@
 	
 }
 .InputfieldRepeaterDeletePending > label.ui-state-error{
-	background: @error !important;
+	background: @red !important;
 	.ui-icon{
 		background-image: url(jqueryui/images/ui-icons-white.png);
 		opacity: 1;
@@ -339,14 +337,14 @@
 			color: @grayDark!important;
 		}
 		> label.ui-widget-header:hover{;
-			background: @blue;
-			color: #fff!important;
+			background: @base;
+			// color: #fff!important;
 		}
 		> .ui-widget-header.ui-state-focus{
-			background: @blueDark!important;
+			background: @baseDark!important;
 		}
 		> .ui-widget-header.ui-state-highlight{
-			background: @notice!important;
+			background: @yellow!important;
 			color: @grayDark!important;
 			.ui-icon {background-image: url(jqueryui/images/ui-icons.png)!important; }
 		}
@@ -357,31 +355,7 @@
 /**
  * PageListSelect
  */
-.Inputfield{
-	
-	.PageListRoot{
-		padding-bottom: 0;
-		line-height: 29px;
-		.PageListSelectActionToggle{
-		    padding: 7px 8px!important;
-		    color: @grayDark!important;
-		    color: #fff!important;
-		    background: @blue;
-		    border: 1px solid rgba(0,0,0,0.15);
-		    text-transform: uppercase;
-		    font-size: 11px;
-		    font-weight: bold;
 
-			&:hover{
-				
-				background: @pink;
-			}
-		}
-		> .PageList{
-			margin: 4px 0 0 0!important;
-		}
-	}
-}
 .InputfieldPageListSelectMultiple{
 
 	ol{
@@ -403,7 +377,7 @@
 	}
 }
 .ui-state-hover .AjaxUploadDropHere{
-	border-color: @blue;
+	border-color: @base;
 }
 
 
@@ -412,11 +386,11 @@
 	background: transparent;
 	border: 0 !important;
 	color: #222!important;
-	line-height: 30px;
+	// line-height: 30px;
 	font-size: 16px;
 
 	.ui-icon{
-		margin: 6px 8px 0 0!important;
+		margin: 0!important;
 		padding: 0;
 	}
 	&.ui-state-default{ // reapeter uses this
@@ -485,7 +459,7 @@
 }
 
 .ui-state-hover .InputfieldFileUpload .AjaxUploadDropHere{
-	border-color: @blue;
+	border-color: @base;
 	color: #222;
 }
 
@@ -501,12 +475,12 @@
 }
 .InputfieldStateError{
 	.ui-widget-header{
-		background: @error!important;
+		background: @red!important;
 	}
 	span.ui-state-error{
 		background: transparent;
 		// border: 0;
-		color: @errorDark;
+		color: @redDark;
 		font-weight: bold;
 	}
 }
@@ -529,9 +503,10 @@
 
 
 
-.InputfieldFieldsetTabOpen,
+
 .InputfieldWrapper{
-	.box-shadow(none);
+	background-color: transparent;
+	padding: 0;
 }
 
 
@@ -602,4 +577,10 @@
 			}
 		}	
 	}
+}
+
+
+.ui-sortable li{
+	padding: 0.6em 0.4em !important;
+	margin-bottom: 0.4em !important;
 }

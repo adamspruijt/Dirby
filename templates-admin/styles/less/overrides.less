@@ -35,13 +35,11 @@
 #_ProcessPageEditView{
 	float: right;
 	margin: 0;
-	color: @grayDark;
-	background: @grayLighter;
-	border: 1px solid rgba(0,0,0,0.1)!important;
+	color: #fff;
+	background: @green;
 }
 #_ProcessPageEditView:hover{
-	background: @pink;
-	color: #fff;
+	background: @greenDark;
 }
 
 #wrapper #fieldgroupContext{
@@ -66,18 +64,23 @@
 		margin-bottom: 0;
 	}
 }
-.cke,
-.cke_reset{
-	.transition(box-shadow 0.4s);
+
+.cke{
+	border: none !important;
 	.box-shadow(none) !important;
+	.cke_top{
+		
+	}
 	.cke_top,
 	.cke_bottom {
-		background: @grayLighter !important;
-		border-top: none !important;
+		background: #fff !important;
+		border: none !important;
+		padding-left: 0;
+		padding-right: 0;
 		.box-shadow(none) !important;
 	}
-	.cke_bottom {
-		border-top: 1px solid #ccc !important;
+	.cke_contents{
+		border: 1px solid #aaa;
 	}
 	.cke_combo_button,
 	.cke_toolgroup{
@@ -90,7 +93,7 @@
 	}
 	.cke_button_on,
 	.cke_combo_on a.cke_combo_button{
-		background: @blue !important;
+		background: @base !important;
 		.box-shadow(inset 0 0 3px rgba(0,0,0,0.2)) !important;
 		span{
 			opacity: 0.5;
@@ -98,8 +101,8 @@
 	}
 }
 .cke_focus.cke{
-	.box-shadow( 0 0 3px @blue ) !important;
-	border: 1px solid @blue !important;
+	.box-shadow( 0 0 3px @base ) !important;
+	border: 1px solid @base !important;
 }
 #user-menu a.tooltip.ui-state-hover{
 	padding: 0;
@@ -112,3 +115,6 @@
 	margin-top: 1em;
 }
 
+.labelIcon{
+	display: none;
+}

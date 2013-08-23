@@ -8,8 +8,9 @@
 }
 
 .logo{
-	margin: 4px 1em 4px 0;
+	margin: 1em auto 2em;
 }
+
 
 img{
 	max-width: 100%;
@@ -33,12 +34,11 @@ img{
 
 .copy{
 	font-weight: bold;
-	color: @blueDarker;
-	text-shadow: 1px 1px 1px @blueLighter;
+	color: #888;
 	a{
-		color:  darken(@blueDarker, 3%);
+		color:  #777;
 		&:hover{
-			color: @pink;
+			color: @orange;
 		}
 	}
 	margin: 1.5em 0;
@@ -67,21 +67,21 @@ img{
 			font-weight: bold;
 			text-transform: uppercase;
 			&.success{
-				background: @success;
+				background: @green;
 				color: #fff;
 				// font-size: 11px;
 				a{
-					color: darken(@successDark, 10%);
+					color: darken(@greenDark, 10%);
 					font-weight: bold;
 				}
 			}
 			&.error{
-				background: @error;
-				border-color: @errorDark;
+				background: @red;
+				border-color: @redDark;
 
 				color: #fff;
 				a{
-					color: darken(@errorDark, 10%);
+					color: darken(@redDark, 10%);
 					font-weight: bold;
 				}
 			}
@@ -101,7 +101,7 @@ img{
 	font-weight: bold;
 	line-height: 11px;
 	color: @grayDark;
-	background: @noticeLight;
+	background: @yellowLight;
 	.ui-icon{
 		float: left;
 		margin: -2px 8px 0 0;
@@ -120,24 +120,28 @@ td .notes{
 
 
 .gravatar{
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 1em ;
+	position: relative;
+	display: block;
 	height: 48px;
 	width: 48px;
+
 }
+.gravatar-wrapper{
+	border-radius: 50%;
+	overflow: hidden;
+	float: left;
+	border: 6px solid desaturate(darken(@base, 8%), 2%) ;
+	display: inline-block;
+
+}
+
 .user-menu{
 	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	padding: 0;
-	margin: 10px 0;
 	vertical-align: middle;
-	
+	margin: 0.9em;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 14px;
-	// text-shadow: 0 0 4px @blueDark;
 	a:hover{
 		color: @grayDark !important;
 
@@ -149,6 +153,6 @@ td .notes{
 	}
 }
 .user-logout{
-	color: @blueDarker;
+	color: #aaa;
 	font-size: 12px;
 }

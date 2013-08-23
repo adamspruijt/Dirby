@@ -1,21 +1,21 @@
 .PageListRoot{
 	 padding-bottom: 1em;
 }
+a.PageListPage{
+	font-size: 16px;
+	font-weight: bold;
+}
 a.PageListPage,
 a.PageListPage:hover {
-	font-weight: bold;
-	color: @blue;
+	color: #444;
 	background: transparent!important;
 }
 a.PageListPage:hover {
-	color: @pink;
+	color: @orange;
 }
 
 .PageList{
 	margin-top: 0!important;
-	.PageListItem{
-		border-top: none!important;
-	}
 	.PageListItem + .PageListActions{
 		margin-bottom: 0.5em !important;
 		display: block;
@@ -33,14 +33,12 @@ a.PageListPage:hover {
 
 .PageListItem {
 	clear: both;
-	// border-bottom: 1px solid @grayLighter;
-	border-top: 1px solid #fff;
-
+	padding: 1em !important;
 	&.PageListStatusUnpublished a{
 			color: @gray;
 		}
 	.PageListActions {
-		margin-left:3px;
+		margin-left: 1em !important;
 		li{
 			border: none;
 		}
@@ -80,16 +78,17 @@ a.PageListPage:hover {
 .PageList .PageListActionMore,
 .PageListItem .PageListActions{
 	a {
-		margin: 0 0 0 3px!important;
-	    padding: 3px 6px;
+		margin: 0 1em!important;
+	    padding: 0 ;
 	    // color: #fff;
-	    color: @grayDark;
+	    color: #999;
 	    text-transform: uppercase;
-	    font-size: 11px;
+	    // font-size: 11px;
 	    font-weight: bold;
 	}
 	a:hover{
-		background: #fff;
+		// background: #fff;
+		color: #444;
 	}
 }
 
@@ -98,29 +97,32 @@ a.PageListPage:hover {
 	color: #fff!important;
 }
 
+.PageListItemOpen{
+	background: #fff;
+}
+
 .PageListItemOpen, .PageListSortItem{
 	.PageListNumChildren,
 	.PageListPage{
-		color: @pink;
+		color: @orange;
 	}
 }
 
 .PageListNumChildren{
-	color: @gray;
+	color: #aaa;
 	float: right;
 	font-weight: bold;
-	font-size: 12px!important;
 }
 .PageListItem:hover > .PageListNumChildren{
-	color: @blue;
+	color: @base;
 }
 .PageListMoveNote{
 	color: @gray;
 	a{ // this should always be the cancel link I believe...
-		color: @error!important;
+		color: @red!important;
 	}
 	a:hover{ // this should always be the cancel link I believe...
-		color: @errorDark!important;
+		color: @redDark!important;
 	}
 
 }
@@ -128,15 +130,15 @@ ul.MarkupPagerNav,
 ul.PageListPagination{
 	padding: 0;
 	display: block !important;
-	margin: 1em 0 0.6em !important;
+	margin: 1.5em 0!important;
 	// float: left;
 	// overflow: hidden;
 	height: 20px;
 	.clearfix();
-	background: #fff;
-	border: 1px solid rgba(0,0,0,0.15);
+	// background: #fff;
+	// border: 1px solid rgba(0,0,0,0.15);
 	li{
-		margin: -1px 4px -1px -1px;
+		margin: -1px 1em -1px -1px;
 		line-height: 20px;
 		padding: 0;
 		display: block;
@@ -144,27 +146,27 @@ ul.PageListPagination{
 		background: transparent;
 		border: none;
 		a{
+			border-radius: 50%;
 			background: transparent;
 			color: @grayDark;
-			padding: 0 6px;
-			min-width: 9px;
+			padding: 0.6em;
+			width: 1em;
+			height: 1em;
+			line-height: 1em;
 			text-align: center;
 			margin: 0;
-			font-size: 11px;
+			// font-size: 11px;
 			display: block;
-			border: 1px solid transparent !important;
 		}
 		a:hover{
-			background-color: @pink;
-			border: 1px solid rgba(0,0,0,0.15) !important;
+			background-color: @base;
 			color: #fff;
 		}
 	}
 	
 	.PageListPaginationCurrent{
 		a{
-			background: @blue;
-			border: 1px solid rgba(0,0,0,0.15) !important;
+			background: #aaa !important;
 			color: #fff;
 			opacity: 1!important;
 		}
@@ -174,17 +176,17 @@ ul.PageListPagination{
 		color:transparent !important;
 		height: 16px !important;
 		width: 16px;
-		margin: 2px 6px 2px 2px;
+		margin: 0.5em;
 
 		padding: 0;
-		opacity: 0.6;
+		opacity: 0.4;
 		background-color: transparent !important;
 		border-color: transparent !important;
 		background: url(jqueryui/images/ui-icons.png) -32px -16px no-repeat;
 		&:hover,
 		&.ui-state-hover{
 			border-color: transparent !important;
-			opacity: 1;
+			opacity: 1 ;
 		}
 	}
 	li:first-child .ui-priority-secondary{
@@ -225,14 +227,14 @@ ul.PageListPagination{
 	height: 0px !important 	;
 	border-style: solid;
 	border-width: 6px 0 6px 8px;
-	border-color: transparent transparent transparent @blue;
+	border-color: transparent transparent transparent @base;
 }
 
 .PageListSortPlaceholder:after {
 	content : "";
 	width: 8px !important;
 	height: 4px !important ;
-	background: @blue;
+	background: @base;
 	position: absolute;
 	left: -8px;
 	top: -1px;
@@ -255,43 +257,4 @@ ul.PageListPagination{
 .PageListLoading{
 	margin: 0 0.4em;
 	background: url(images/loading.gif) top center  no-repeat!important;
-}
-
-
-.PageListItem{
-	padding: 0.8em 0 0.8em 2em!important;
-	background: url(images/icon_page_50.png) 0 center no-repeat;
-	background-repeat: no-repeat !important;
-}
-.PageListItem.PageListItemOpen {
-	background-image: url(images/icon_page.png);
-}
-.PageListItem.PageListStatusSystem {
-	background-image: url(images/icon_menu.png);
-}
-.PageListItem.PageListStatusLocked {
-	background-image: url(images/icon_lock.png);
-}
-// home
-.PageListItem.PageListID1 {
-	background-image: url(images/icon_home.png);
-}
-// trash
-.PageListItem.PageListID7 {
-	background-image: url(images/icon_trash.png);
-}
-// admin/setup
-.PageListItem.PageListID22 {
-	background-image: url(images/icon_gear.png);
-}
-// admin/profile
-.PageListItem.PageListID304 {
-	background-image: url(images/icon_user.png);
-}
-// admin/access
-.PageListItem.PageListID28 {
-	background-image: url(images/icon_key.png);
-}
-.PageListItem.PageListSortItem.ui-sortable-helper{
-	background: #fff !important;
 }

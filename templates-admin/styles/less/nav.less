@@ -14,30 +14,26 @@
 		padding: 0;
 		position: relative;
 		text-transform: uppercase;
-			display: block;
-			// float: left;
+		font-size: 16px;
+	
 
 		a {
 			display: block;
-			// float: left;
-			border-radius: 5px;
-			padding: 0 12px;
-			margin: 0;
-			height: 42px;
-			line-height: 42px;
-			font-size: 13px;
-			color: #888;
-			// border-left: 1px solid #fff;
-			// border-right: 1px solid @grayLighter;
+			
+			border-radius: 0.4em;
+			padding: 0 1em;
+			margin-bottom: 1em;
+			line-height: 3em;
+			color: lighten(@base, 20%);
 			font-weight: bold;
 		}
 		a:hover {
-			color: @blueDark;
+			color: #eee;
 		}
 		a.on {
-			background:  #687993;
-			color: #fff;
-			border-color: @pinkDark;
+			background:  darken(@base, 10%);
+			color: lighten(@base, 12%);
+			border-color: @orangeDark;
 		}
 		&.fright a{
 			margin: 0 0 0 8px;
@@ -80,7 +76,7 @@
 			text-shadow: none;
 			&:hover{
 				color: #fff !important;
-				background: @blue;
+				background: @base;
 				.transition(all 0.2s);
 			}
 			&.on{
