@@ -68,8 +68,7 @@ img{
 			text-transform: uppercase;
 			&.success{
 				background: @green;
-				color: #fff;
-				// font-size: 11px;
+				color: lighten(@green, 25%);
 				a{
 					color: darken(@greenDark, 10%);
 					font-weight: bold;
@@ -77,9 +76,8 @@ img{
 			}
 			&.error{
 				background: @red;
-				border-color: @redDark;
 
-				color: #fff;
+				color: lighten(@red, 25%);
 				a{
 					color: darken(@redDark, 10%);
 					font-weight: bold;
@@ -130,15 +128,21 @@ td .notes{
 	border-radius: 50%;
 	overflow: hidden;
 	float: left;
-	border: 6px solid desaturate(darken(@base, 8%), 2%) ;
+	border: 6px solid darken(@base, 6%) ;
 	display: inline-block;
-
+	margin: 1em;
 }
-
+#user-menu{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: darken(@base, 4%);
+}
 .user-menu{
 	display: inline-block;
 	vertical-align: middle;
-	margin: 0.9em;
+	margin: 2em 0;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 14px;

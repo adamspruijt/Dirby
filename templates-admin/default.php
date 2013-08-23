@@ -40,15 +40,15 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 
 
 <body id="branded" class="login">
-	
+	<?php if(count($notices)) include("notices.inc"); ?>
 	<div class="login-box">
 		<div id="logo">
-        	<img src="<?php echo $config->urls->adminTemplates ?>styles/images/pw-logo.png">
+        	<img src="<?php echo $config->urls->adminTemplates ?>styles/images/logo.png">
         </div>
         <div class="login-form">
         	<?php echo $content?>
         </div>
-	    <?php if(count($notices)) include("notices.inc"); ?>
+	   
 	    <div id="skyline"></div>
 	</div>
 	<script>

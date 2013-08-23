@@ -4,6 +4,9 @@
 a.PageListPage{
 	font-size: 16px;
 	font-weight: bold;
+	line-height: 1.1em;
+	display: inline-block;
+	vertical-align: middle;
 }
 a.PageListPage,
 a.PageListPage:hover {
@@ -34,6 +37,8 @@ a.PageListPage:hover {
 .PageListItem {
 	clear: both;
 	padding: 1em !important;
+	margin-bottom: 0.5em;
+	border-radius: 0.4em;
 	&.PageListStatusUnpublished a{
 			color: @gray;
 		}
@@ -72,7 +77,11 @@ a.PageListPage:hover {
 
 
 
-
+.PageListItem .PageListActions{
+	margin: 0;
+	padding: 0;
+	vertical-align: text-bottom;
+}
 
 .PageListItem .PageListMoveNote,
 .PageList .PageListActionMore,
@@ -81,14 +90,13 @@ a.PageListPage:hover {
 		margin: 0 1em!important;
 	    padding: 0 ;
 	    // color: #fff;
-	    color: #999;
+	    color: lighten(@orange, 25%);
 	    text-transform: uppercase;
-	    // font-size: 11px;
 	    font-weight: bold;
 	}
 	a:hover{
 		// background: #fff;
-		color: #444;
+		color: darken(@orange, 20%);
 	}
 }
 
@@ -97,14 +105,20 @@ a.PageListPage:hover {
 	color: #fff!important;
 }
 
-.PageListItemOpen{
-	background: #fff;
+.PageList .PageListItem.PageListItemOpen{
+	background: @orange;
+	> .PageListPage{
+		color: darken(@orange, 20%);
+	}
+	.PageListActions{
+		display: inline-block !important;
+	}
 }
 
 .PageListItemOpen, .PageListSortItem{
 	.PageListNumChildren,
 	.PageListPage{
-		color: @orange;
+		color: darken(@orange, 20%) !important;
 	}
 }
 

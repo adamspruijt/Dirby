@@ -1,15 +1,17 @@
 @base: #444f5f;
-@baseLight: #69b7ef;
-@baseLighter: lighten(#69b7ef, 8%);
+// @base: #635754;
+
+@baseLight: lighten(@base, 8%);
+@baseLighter: lighten(@base, 16%);
 @baseDark: darken(@base, 8%);
-@baseDarker: darken(@baseDark, 10%);
-@baseSoft : #e4ebee;
+@baseDarker: darken(@base, 16%);
+@baseSoft :  lighten(@base, 30%);
 
 
-@orange : #f70;
+@orange : #f2673a;
 @orangeDark : darken(@orange, 8%);
 
-@red: #c00;
+@red: #d12b33;
 @redDark: darken(@red, 10%);
 
 @green: #43b979;
