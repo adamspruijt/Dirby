@@ -101,14 +101,17 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 		
 		
 		<div id="main">
+			<?php if(count($notices)) include("notices.inc"); ?>
 			<div id="main-header">
+
 				<div class="container">
+
 					<h1><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
 			    	<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
 				</div>
 			</div>
 			
-			<div id="bread">
+			<!-- <div id="bread">
 				<div class="container">
 					<ul id="breadcrumbs">
 					<?php
@@ -121,10 +124,10 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 					<li class="fright"><a target="_blank" id="view-site" href="<?php echo $config->urls->root; ?>">View Site</a></li>
 					</ul>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="container">
-				<?php if(count($notices)) include("notices.inc"); ?>
+				
 			    <div id="content" class="fouc_fix">
 					<div class="container">
 						<?php if($page->body) echo $page->body; ?>

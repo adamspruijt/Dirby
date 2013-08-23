@@ -58,18 +58,18 @@ img{
 #notices{
 	ul{
 		width: 100%;
-		margin: 12px 0 0 0 !important;
+		margin: 0 !important;
 		padding: 0 !important;
 		list-style: none;
 		li{
-			.listItemSpacing();
-			padding: 4px 6px;
+			padding: 0.6em 1em;
+			margin: 0 !important;
 			font-weight: bold;
 			text-transform: uppercase;
 			&.success{
 				background: @success;
 				color: #fff;
-				font-size: 11px;
+				// font-size: 11px;
 				a{
 					color: darken(@successDark, 10%);
 					font-weight: bold;
@@ -120,14 +120,11 @@ td .notes{
 
 
 .gravatar{
-	.box-shadow(0 1px 2px @blueDark);
 	display: inline-block;
 	vertical-align: middle;
-	padding: 2px;
 	margin-right: 1em ;
 	height: 48px;
 	width: 48px;
-	background: #fff;
 }
 .user-menu{
 	display: inline-block;
@@ -148,7 +145,6 @@ td .notes{
 }
 .user-name{
 	color: #fff;
-	text-shadow: 0 1px 1px @blueDark;
 	&:hover{
 	}
 }

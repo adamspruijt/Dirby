@@ -35,6 +35,13 @@
 		.box-sizing(border-box);
 		margin: 0;
 		padding: 6px;
+		border-bottom: 3px dashed @blue;
+	}
+	input:hover, select:hover, textarea:hover{
+		border-color: @success;
+	}
+	input:focus, select:focus, textarea:focus{
+		border-color: @pink;
 	}
 
 	> label.ui-widget-header{
@@ -293,7 +300,7 @@
 	float: right;
 	position: relative;
 	.InputfieldRepeaterAddLink{
-		 .ui-state-default();
+		.ui-state-default();
 	    .ui-button();
 	   
 	    padding-left: 26px!important;
