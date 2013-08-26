@@ -28,7 +28,7 @@
 	clear: both;
 	background: #fff;
 	// padding: 1em;
-
+	border-radius: 0.3em;
 	input, select, textarea{
 		.box-sizing(border-box);
 		margin: 0;
@@ -50,7 +50,16 @@
 		padding: 1em;
 		display: block;
 		height: 1.1em;
+		color: @base;
 
+		.ui-icon{
+			color: @baseLighter;
+			font-size: 1.3em;
+			margin-left: 0.5em !important;
+			&:hover{
+				color: @orange;
+			}
+		}
 	}
 
 	> .ui-widget-content {
@@ -384,15 +393,8 @@
 .InputfieldStateToggle.ui-widget-header {
 	padding: 0 0 0 9px;
 	background: transparent;
-	border: 0 !important;
-	color: #222!important;
-	// line-height: 30px;
 	font-size: 16px;
 
-	.ui-icon{
-		margin: 0!important;
-		padding: 0;
-	}
 	&.ui-state-default{ // reapeter uses this
 		background: white;
 	}
