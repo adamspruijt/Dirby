@@ -72,17 +72,24 @@ input#columnWidth{
 .ui-button.ui-state-default,
 .ui-button{
     margin: 0;
-    padding: 1em 2em!important;
+    border-radius: 0.4em;
+    font-size: 16px !important;
+    padding: 1em 1.7em !important;
     text-transform: uppercase;
     -webkit-font-smoothing: antialiased;
     // border-color: transparent!important;
-    background: @base;
+    background: @green;
     color: #fff!important;
+}
+.ui-button{
+    .ui-icon{
+        color: #fff !important;
+    }
 }
 .InputfieldPageAdd .InputfieldPageAddButton > a:hover,
 .ui-button.ui-state-hover,
 .ui-button:hover{
-    background: @orange;
+    background: @greenDark;
 }
 .ui-button-text{
     padding: 0 !important;
@@ -292,11 +299,8 @@ a.on#_WireTabDelete{
 }
 .langTabsContainer{
      padding: 0 !important;
-     > .ui-widget-content{
-        background: lighten(#eee, 4%) !important;
-     }
      .description{
-        padding-top: 1em;
+        padding: 1em 1.2em;
      }
 }
 
@@ -305,6 +309,7 @@ a.on#_WireTabDelete{
     clear: both;
     .ui-tabs-nav{
         padding: 0 !important;
+        background: lighten(#eee, 4%) !important;
         background: transparent;
         border: 0 !important;
         position: relative;
@@ -314,17 +319,19 @@ a.on#_WireTabDelete{
         li{
             margin: 0 !important;
             position: relative;
+            padding: 0 !important;
             z-index: 1000;
             // bottom: -1px;
             &.ui-state-default{
-                background: #fff!important;
+                background: transparent!important;
                 border: none !important;
 
             }
 
             &.ui-state-default.ui-state-hover{
+                background: @base!important;
                 a{
-                    color: @base !important;
+                    color: #fff !important;
                 }
             }
             &.ui-state-default.ui-state-active{
@@ -339,7 +346,7 @@ a.on#_WireTabDelete{
                 background: transparent !important;
                 text-transform: uppercase;
                 font-size: 12px !important;
-                padding: 0.8em 1.2em !important;
+                padding: 0.8em 1.2em  !important;
             }
         }
     }

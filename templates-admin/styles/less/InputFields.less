@@ -27,21 +27,19 @@
 	margin-bottom: 2em;
 	clear: both;
 	background: #fff;
-	// padding: 1em;
-	border-radius: 0.3em;
 	input, select, textarea{
 		.box-sizing(border-box);
 		margin: 0;
 		padding: 6px;
-		border: 3px dashed #ddd;
+		border: 3px solid #ddd;
+	}
+	select{
+		padding: 5px;	
 	}
 	input:hover, select:hover, textarea:hover{
-		border-style: solid;
-		// border-color: @base;
+		border-color: #bbb;
 	}
 	input:focus, select:focus, textarea:focus{
-		border-style: solid;
-
 		border-color: @green;
 	}
 
@@ -68,6 +66,8 @@
 		border-top: 0;
 		position: relative;
 		background: #fff;
+		.clearfix();
+		// border-radius: 0.3em;
 	}
 	.PageListRoot{
 		padding-bottom: 0;
@@ -103,23 +103,29 @@
 
 
 .InputfieldStateCollapsed{
-	opacity: 0.4;
-	background: #ccc;
+	opacity: 0.6;
+	background: #fff;
 	> label.ui-widget-header{
-		border-color: rgba(0,0,0,0.1);
+		color: @base;
 		.ui-icon {
+			color: @base !important;
 			background-image: url(jqueryui/images/ui-icons.png);
 			opacity: 1;
 		}
 	}
 }
-.InputfieldStateCollapsed:hover{
-	opacity: 0.4;
-	> label.ui-widget-header{
+.InputfieldStateToggle:hover{
+	background: #fafafa !important;
+}
+.InputfieldStateCollapsed:hover > label.ui-widget-header{
 		color: #fff !important;
-	}
+		background: @base !important;
+		.ui-icon{
+			color: #fff !important;
+		}
 	
-	background: @orange;
+	
+	background: lighten(@baseLighter, 5%);
 }
 
 
@@ -296,6 +302,11 @@
 		}
 	
 }
+
+// .InputfieldMarkup{
+// 	padding-top: 0.5em;
+// }
+
 .InputfieldRepeaterDeletePending > label.ui-state-error{
 	background: @red !important;
 	.ui-icon{
@@ -412,11 +423,12 @@
 }
 
 .InputfieldButton, .InputfieldSubmit{
+	background-color: transparent;
+	padding: 0;
 	.box-shadow( none);
 	padding: 0;
 	.ui-widget-content{
 		padding: 0;
-		padding-top: 12px;
 		border: none;
 		.box-shadow( none);
 		background: transparent;
