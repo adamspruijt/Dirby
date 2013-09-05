@@ -33,16 +33,19 @@ img{
 }
 
 .copy{
+	background: darken(@baseSoft, 5%);
+	border-top: 1px solid darken(@baseSoft, 12%);
 	font-weight: bold;
-	color: #888;
+	display: block;
+	padding: 1em;
+	color: darken(@baseSoft, 36%);
 	a{
-		color:  #777;
+		color:  darken(@baseSoft, 50%);
 		&:hover{
 			color: @orange;
 		}
 	}
-	margin: 1.5em 0;
-	padding: 0;
+	margin: 0;
 }
 .text_center{
 	text-align: center;
@@ -138,16 +141,18 @@ td .notes{
 	left: 0;
 	bottom: 0;
 	background: darken(@base, 4%);
+	border-top: 1px solid darken(@base, 7%);
 }
 .user-menu{
 	display: inline-block;
 	vertical-align: middle;
-	margin: 2em 0;
+	margin: 1.8em 0;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 15px;
+
 	a:hover{
-		color: @grayDark !important;
+		color: @orange !important;
 
 	}
 }

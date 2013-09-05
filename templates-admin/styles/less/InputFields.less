@@ -23,10 +23,11 @@
 }
 
 .Inputfield{
-	border: 0!important;
+	
 	margin-bottom: 2em;
 	clear: both;
-	background: #fff;
+	// background: #fff;
+	padding: 0 !important;
 	input, select, textarea{
 		.box-sizing(border-box);
 		margin: 0;
@@ -48,8 +49,9 @@
 		padding: 1em;
 		display: block;
 		height: 1.1em;
-		color: @base;
-
+		color: darken(@orange, 10%);
+		border-bottom: 1px solid darken(@baseSoft, 10%);
+		border-left: 1px solid darken(@baseSoft, 10%);
 		.ui-icon{
 			color: @baseLighter;
 			font-size: 1.3em;
@@ -64,8 +66,9 @@
 		padding: 1em;
 		padding-top: 0;
 		border-top: 0;
+		border-left: 1px solid darken(@baseSoft, 10%);
 		position: relative;
-		background: #fff;
+		background: transparent;
 		.clearfix();
 		// border-radius: 0.3em;
 	}
@@ -104,7 +107,7 @@
 
 .InputfieldStateCollapsed{
 	opacity: 0.6;
-	background: #fff;
+	// background: #fff;
 	> label.ui-widget-header{
 		color: @base;
 		.ui-icon {
@@ -115,17 +118,19 @@
 	}
 }
 .InputfieldStateToggle:hover{
-	background: #fafafa !important;
+	// background: #fafafa !important;
 }
-.InputfieldStateCollapsed:hover > label.ui-widget-header{
+.InputfieldStateCollapsed:hover{
+	> label.ui-widget-header{
 		color: #fff !important;
-		background: @base !important;
+		// background: transparent !important;
 		.ui-icon{
 			color: #fff !important;
 		}
-	
-	
+	}
+	// opacity: 1 !important;
 	background: lighten(@baseLighter, 5%);
+
 }
 
 
@@ -516,10 +521,11 @@
 }
 
 
-
-
+.InputfieldSubmit,
+.InputfieldFieldsetTabOpen,
 .InputfieldWrapper{
 	background-color: transparent;
+	border: 0;
 	padding: 0;
 }
 
@@ -595,6 +601,6 @@
 
 
 .ui-sortable li{
-	padding: 0.6em 0.4em !important;
-	margin-bottom: 0.4em !important;
+	// padding: 0.6em 0.4em !important;
+	// margin-bottom: 0.4em !important;
 }

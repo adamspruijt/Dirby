@@ -138,9 +138,9 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 				</div>
 			</div>
 
-			<div id="footer">
+			<div id="footer" class="copy">
 				<div class="container">
-					<p class="copy fright"><a href="http://processwire.com/">ProcessWire</a> <?php echo $config->version; ?> - Copyright &copy; <?php echo date("Y"); ?> by Ryan Cramer</p>
+					<p class=" fright"><a href="http://processwire.com/">ProcessWire</a> <?php echo $config->version; ?> - Copyright &copy; <?php echo date("Y"); ?> by Ryan Cramer</p>
 				</div>
 			</div>
 

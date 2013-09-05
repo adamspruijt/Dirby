@@ -1,12 +1,13 @@
 .PageListRoot{
-	 padding-bottom: 1em;
+	 padding: 2em 0;
+
 }
 a.PageListPage{
-	font-size: 16px;
+	// font-size: 16px;
 	font-weight: bold;
-	line-height: 1.1em;
+	line-height: 1.8em;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: text-bottom;
 }
 a.PageListPage,
 a.PageListPage:hover {
@@ -36,14 +37,21 @@ a.PageListPage:hover {
 
 .PageListItem {
 	clear: both;
-	padding: 1em !important;
+	line-height: 24px;
+	padding: 0.8em 1em !important;
 	margin-bottom: 0.5em;
-	border-radius: 0.4em;
+	// border-radius: 0.4em;
+	// border: 1px solid transparent;
 	&.PageListStatusUnpublished a{
 			color: @gray;
 		}
 	.PageListActions {
 		margin-left: 1em !important;
+		background: darken(@orange, 10%);
+		border-radius: 1em;
+		padding: 0.4em !important;
+		// line-height: 24px;
+		vertical-align: text-bottom;
 		li{
 			border: none;
 		}
@@ -54,6 +62,17 @@ a.PageListPage:hover {
 		background: #fff;
 		padding: 8px 1%!important;
 		width: 98%!important;
+	}
+}
+
+.PageList .PageListItem.PageListItemOpen{
+	background: @orange;
+	border-color: darken(@orange, 6%);
+	> .PageListPage{
+		color: darken(@orange, 20%);
+	}
+	.PageListActions{
+		display: inline-block !important;
 	}
 }
 
@@ -87,8 +106,8 @@ a.PageListPage:hover {
 .PageList .PageListActionMore,
 .PageListItem .PageListActions{
 	a {
-		margin: 0 1em!important;
-	    padding: 0 ;
+		margin: 0 0.7em!important;
+	    padding: 0;
 	    // color: #fff;
 	    color: lighten(@orange, 25%);
 	    text-transform: uppercase;
@@ -96,7 +115,7 @@ a.PageListPage:hover {
 	}
 	a:hover{
 		// background: #fff;
-		color: darken(@orange, 20%);
+		color: #fff;
 	}
 }
 
@@ -105,15 +124,7 @@ a.PageListPage:hover {
 	color: #fff!important;
 }
 
-.PageList .PageListItem.PageListItemOpen{
-	background: @orange;
-	> .PageListPage{
-		color: darken(@orange, 20%);
-	}
-	.PageListActions{
-		display: inline-block !important;
-	}
-}
+
 
 .PageListItemOpen, .PageListSortItem{
 	.PageListNumChildren,
@@ -126,6 +137,7 @@ a.PageListPage:hover {
 	color: #aaa;
 	float: right;
 	font-weight: bold;
+	line-height: 2em;
 }
 .PageListItem:hover > .PageListNumChildren{
 	color: @base;
@@ -271,4 +283,5 @@ ul.PageListPagination{
 .PageListLoading{
 	margin: 0 0.4em;
 	background: url(images/loading.gif) top center  no-repeat!important;
+	display: none !important;
 }
