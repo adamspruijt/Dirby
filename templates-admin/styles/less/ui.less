@@ -307,37 +307,46 @@ a.on#_WireTabDelete{
 .langTabs.ui-tabs{
     border: 0;
     clear: both;
+    background-color: transparent !important;
     .ui-tabs-nav{
         padding: 0 !important;
-        background: lighten(#eee, 4%) !important;
-        background: transparent;
+        // background: lighten(#eee, 4%) !important;
+        background: transparent !important;
         border: 0 !important;
         position: relative;
         z-index: 0;
         // margin: 0 -1em;
+        margin-top: -1px;
         .box-sizing(border-box);
         li{
-            margin: 0 !important;
+            margin-left: 0.6em !important;
             position: relative;
             padding: 0 !important;
             z-index: 1000;
             // bottom: -1px;
             &.ui-state-default{
                 background: transparent!important;
-                border: none !important;
-
+                border: 0 !important;
+                border-top: 1px solid transparent !important;
+                color: @base !important;
+                margin-left: 1em;
+                a{
+                    color: @base;
+                }
             }
 
             &.ui-state-default.ui-state-hover{
-                background: @base!important;
+                // background: @base!important;
+                border-color: @base !important;
                 a{
-                    color: #fff !important;
+                    color: @baseDarker !important;
                 }
             }
             &.ui-state-default.ui-state-active{
-                background: @orange !important;
+                // background: @orange !important;
+                border-color: @orange !important;
                 a{
-                    color: #fff;
+                    color: darken(@orange, 5%) !important;
                 }
             }
             a{
