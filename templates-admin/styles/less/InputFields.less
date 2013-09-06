@@ -1,3 +1,5 @@
+@InputBorder: darken(@baseSoft, 16%);
+
 .Inputfields {
 	padding: 0;
 	margin: 0;
@@ -34,7 +36,7 @@
 		.box-sizing(border-box);
 		margin: 0;
 		padding: 6px;
-		box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
 		border: 1px solid darken(@baseSoft,15%);
 	}
 	select{
@@ -44,7 +46,7 @@
 		border-color: #bbb;
 	}
 	input:focus, select:focus, textarea:focus{
-		box-shadow: 0 0 3px @green;
+		box-shadow: 0 1px 2px @green;
 		border-color: @green;
 		background: #fff;
 	}
@@ -55,8 +57,8 @@
 		display: block;
 		height: 1.1em;
 		color: darken(@orange, 10%);
-		border-bottom: 1px solid darken(@baseSoft, 10%);
-		border-left: 1px solid darken(@baseSoft, 10%);
+		border-bottom: 1px solid @InputBorder;
+		border-left: 1px solid @InputBorder;
 		.ui-icon{
 			color: @baseLighter;
 			font-size: 1.3em;
@@ -71,7 +73,7 @@
 		padding: 1.2em 1em;
 		// padding-top: 0;
 		border-top: 0;
-		border-left: 1px solid darken(@baseSoft, 10%);
+		border-left: 1px solid @InputBorder;
 		position: relative;
 		background: transparent;
 		.clearfix();
@@ -100,6 +102,18 @@
 		}
 	}
 
+}
+
+.InputfieldFieldsetOpen {
+	.Inputfields{
+		.Inputfield{
+			> label.ui-widget-header,
+			> .ui-widget-content {
+				color: @baseLighter;
+				border-color: darken(@baseSoft, 8%);
+			}
+		}
+	}
 }
 
 // delete state
@@ -147,15 +161,17 @@
 	padding: 0;
 }
 .InputfieldFileUpload{
-	padding: 1em 0 2em 0;
+	padding: 0;
 	position: static !important;
 	input{
 		.box-shadow(none);
-		border: 1px solid #fff !important;
+		border: 0 !important;
 		padding: 0!important;
+		background: transparent !important;
 		position: relative!important;
 		margin: 1.2em 0 0 !important;
-		line-height: 1em !important;
+		line-height: 1.2em !important;
+		font-size: 1.2em;
 	}
 
 	.AjaxUploadDropHere{
@@ -166,6 +182,7 @@
 		display: block !important;
 		margin: 0 -1px -1px 1px;
 		padding: 6px 0;
+		font-size: 1.2em;
 		text-transform: uppercase;
 		text-shadow: 1px 1px 1px #fff;
 		font-style: normal;
@@ -186,16 +203,14 @@
 }
 
 .ui-widget-content.ui-state-hover .AjaxUploadDropHere{
-	background: @green !important;
-	color: rgba(255,255,255,0.9) !important;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+	color: @green !important;
 	.ui-icon.ui-icon-arrowreturnthick-1-s{
 		background-position: -64px -48px;
 		opacity: 0.9;
 	}
 }
 .InputfieldFileList{
-	padding-top: 1em;
+	padding: 0;
 	.InputfieldFile{
 		border: none !important;
 		background: #fff !important;
@@ -206,8 +221,10 @@
 		.InputfieldFileInfo{
 			position: relative;
 			color: @base;
-			background-color: transparent;
-
+			background: transparent !important;
+			font-size: 14px !important;
+			line-height: 1.2em !important;
+			padding: 0.6em 0.4em 0 0.4em !important;
 			.ui-icon-arrowthickstop-1-n,
 			.ui-icon-arrowthickstop-1-s{
 				

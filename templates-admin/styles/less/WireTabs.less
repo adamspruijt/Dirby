@@ -1,8 +1,9 @@
 .WireTabs {
 	left: 0!important;
 	margin: 0;
-	// margin-top: -1px !important;
-	margin-bottom: 3em !important;
+	top: -2em;
+	margin-top: -1px !important;
+	margin-bottom: 0 !important;
 	display: block;
 	// border-bottom: 4px solid #ddd;
 	list-style: none!important;
@@ -23,6 +24,7 @@
 		   	margin: 0 1em 0 0;
 		    font-weight: bold;
 		    text-transform: uppercase;
+		    border-top: 1px solid transparent !important;
 		}
 		a:hover {
 		    color: @grayDark;
@@ -31,7 +33,7 @@
 		a.on{
 			color: @base;
 			// background: #fff;
-			border-bottom: 1px solid @orange ;
+			border-color: @orange !important ;
 			// border-top: 0;
 		}
 	}

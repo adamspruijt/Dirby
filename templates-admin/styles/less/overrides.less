@@ -16,8 +16,6 @@
 // lightbox style fixes for consistency
 #fancy_title{
 	margin-top: -40px;
-	// left: auto!important;
-	// right: 26px;
 	#fancy_title_left,
 	#fancy_title_right{
 		display: none!important;
@@ -32,7 +30,10 @@
 	}
 }
 
-
+.ui-icon-triangle-1-s,
+.ui-icon-triangle-1-e{
+	color: @base !important;
+}
 
 #wrapper #fieldgroupContext{
 	top: 25px !important;
@@ -57,26 +58,18 @@
 	}
 }
 
-.cke{
-	border: 0 !important;
-	.cke_inner{
-		background: transparent;
-	}
+.cke,
+.cke_reset{
+	.transition(box-shadow 0.4s);
 	.box-shadow(none) !important;
-	.cke_top{
-		padding: 0;
-		padding-bottom: 0.8em
-	}
 	.cke_top,
 	.cke_bottom {
-		background: transparent !important;
-		border: none !important;
-		padding-left: 0;
-		padding-right: 0;
+		background: @grayLighter !important;
+		border-top: none !important;
 		.box-shadow(none) !important;
 	}
-	.cke_contents{
-		border: 3px solid #ccc;
+	.cke_bottom {
+		border-top: 1px solid #ccc !important;
 	}
 	.cke_combo_button,
 	.cke_toolgroup{
@@ -90,16 +83,15 @@
 	.cke_button_on,
 	.cke_combo_on a.cke_combo_button{
 		background: @green !important;
-		.box-shadow(none) !important;
+		.box-shadow(inset 0 0 3px rgba(0,0,0,0.1)) !important;
 		span{
-			opacity: 1;
-			text-shadow: none;
-			color: #fff;
+			opacity: 0.5;
 		}
 	}
 }
-.cke.cke_focus .cke_contents{
-	border: 3px solid @green !important;
+.cke_focus.cke{
+	.box-shadow( 0 0 3px @green ) !important;
+	border: 1px solid @green !important;
 }
 #user-menu a.tooltip.ui-state-hover{
 	padding: 0;

@@ -19,10 +19,10 @@ h1 {
 	text-rendering: optimizeLegibility;
 	text-transform: uppercase;
 	font-size: 2.5em;
-	line-height: 53px;
+	line-height: 1.1em;
 	font-family: Impact;
 	font-weight: 100;
-	margin: 1em 0;
+	margin: 0.8em 0;
 }
 h2{
 	color: @orange;
@@ -67,7 +67,9 @@ ul, ol{
 	}
 }
 dl{
-	dt{
+	margin: 0;
+	dt{	
+
 		a.label{
 			font-weight: bold;
 			display: block;
@@ -77,6 +79,7 @@ dl{
 		}
 	}
 	dd{
+		color: lighten(@base, 20%);
 		padding: 6px 0  8px 0;
 		margin: 0 0  16px 0;
 	}
