@@ -49,8 +49,6 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
         <div class="login-form">
         	<?php echo $content?>
         </div>
-	   
-	    <div id="skyline"></div>
 	</div>
 	<script>
 	$(document).ready(function() {
@@ -106,9 +104,11 @@ $config->scripts->append($config->urls->adminTemplates . "scripts/jquery.collage
 			<div id="main-header">
 
 				<div class="container">
+					<div id="heading-text">
+						<h1><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
+				    	<div id="summary"><?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?></div>
+					</div>
 
-					<h1><?php echo strip_tags($this->fuel->processHeadline ? $this->fuel->processHeadline : $page->get("title|name")); ?></h1>
-			    	<?php if(trim($page->summary)) echo "<h2>{$page->summary}</h2>"; ?>
 				</div>
 			</div>
 			

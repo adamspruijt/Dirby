@@ -33,6 +33,7 @@ a.PageListPage:hover {
 }
 
 .PageListItem {
+	position: relative;
 	clear: both;
 	line-height: 24px;
 	padding: 0.8em 1em !important;
@@ -99,7 +100,6 @@ a.PageListPage:hover {
 	vertical-align: text-bottom;
 }
 
-.PageListItem .PageListMoveNote,
 .PageList .PageListActionMore,
 .PageListItem .PageListActions{
 	a {
@@ -123,10 +123,52 @@ a.PageListPage:hover {
 
 
 
-.PageListItemOpen, .PageListSortItem{
+.PageListItemOpen{
 	.PageListNumChildren,
 	.PageListPage{
 		color: darken(@orange, 20%) !important;
+	}
+}
+.PageListSortItem{
+	background: @base;
+	font-size: 14px !important;
+	line-height: 1em !important;
+	.PageListNumChildren{
+		display: none !important;
+	}
+	.PageListPage{
+		vertical-align: baseline;
+		color: #fff !important;
+	}
+}
+.PageListMoveNote{
+	font-weight: bold;
+	color: lighten(@base, 40%) ;
+	margin-left: 1em;
+	text-transform: uppercase;
+	> a{
+		position: absolute;
+		right: 0;
+		background: @red;
+		color: lighten(@red, 30%) !important;
+		display: block;
+		height: 100%;
+		top: 0;
+		margin: 0 !important;
+		padding: 0 1em !important;
+		line-height: 3.6em;
+	}	
+	> a:hover{
+		position: absolute;
+		right: 0;
+		background: @redDark;
+		color: lighten(@red, 10%) !important;
+		display: block;
+		height: 100%;
+		top: 0;
+		margin: 0 !important;
+		padding: 0 1em !important;
+		line-height: 3.6em;
 	}
 }
 
@@ -139,16 +181,7 @@ a.PageListPage:hover {
 .PageListItem:hover > .PageListNumChildren{
 	color: @base;
 }
-.PageListMoveNote{
-	color: @gray;
-	a{ // this should always be the cancel link I believe...
-		color: @red!important;
-	}
-	a:hover{ // this should always be the cancel link I believe...
-		color: @redDark!important;
-	}
 
-}
 ul.MarkupPagerNav,
 ul.PageListPagination{
 	padding: 0;
@@ -232,46 +265,46 @@ ul.PageListPagination{
 .PageListSortPlaceholder {
 	height: 0!important;
 	padding: 0!important;
-	top: -1px;
+	// top: -1px;
 	position: relative;
-	margin: 0 0 -1px 0!important;
+	// margin: 0 0 -1px 0!important;
 	background: transparent!important;
 	border: none!important;
-	border-bottom: 1px dashed @grayDark!important;
+	border-bottom: 2px dashed darken(@baseSoft, 20%)!important;
 	width: auto!important;
 }
 .PageListSortPlaceholder:before {
 	content : "";
 	width: 0px !important;
 	position: absolute;
-	left: -3px;
-	top: -5px;
+	left: -6px;
+	top: -12px;
 	padding: 0;
 	height: 0px !important 	;
 	border-style: solid;
-	border-width: 6px 0 6px 8px;
-	border-color: transparent transparent transparent @base;
+	border-width: 13px 0 13px 17px;
+	border-color: transparent transparent transparent @green;
 }
 
 .PageListSortPlaceholder:after {
 	content : "";
-	width: 8px !important;
-	height: 4px !important ;
-	background: @base;
+	width: 16px !important;
+	height: 10px !important ;
+	background: @green;
 	position: absolute;
-	left: -8px;
-	top: -1px;
+	left: -16px;
+	top: -4px;
 	padding: 0;
 }
 
  .PageListPlaceholder{
 	// overflow: hidden;
  	.PageListPlaceholderItem{
-		border: 1px dashed @grayLight !important;
-		background: @grayLighter;
-		height: 12px !important;
+		border: 2px dashed darken(@baseSoft, 20%) !important;
+		background: @baseSoft;
+		height: 3em !important;
 		padding: 0 !important;
-		margin: 6px 0 !important;
+		margin: 0 0 2em 0 !important;
  	}
 }
 
