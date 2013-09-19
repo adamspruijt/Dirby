@@ -6,11 +6,18 @@
  * jQuery UI tooltips
  *
  */
-
+#content .ui-icon,
 .ui-icon{
     // padding: 0!important;
+    background: transparent !important;
     font-weight: normal !important;
+    display: inline-block;
+    // width: 1em;
+    // height: 1em;
+    font-size: 0;
+    border: 0 !important;
 }
+
 .ui-tooltip {
 	z-index: 100;
     margin: 0 -6px 0 6px !important;
@@ -81,6 +88,7 @@ input#columnWidth{
     // border-color: transparent!important;
     background: @green;
     color: #fff!important;
+    .box-shadow(inset 0 -0.18em 0 rgba(0,0,0,0.15));
 }
 .ui-button{
     .ui-icon{
@@ -195,6 +203,21 @@ a.on#_WireTabDelete{
         padding: 0 !important;
 
     }
+    .ui-dialog-titlebar-close{
+        padding: 0 !important;
+        color: darken(@baseDark, 2%);
+        background-color: transparent !important;
+        width: auto !important;
+        right: 8px !important;
+        .border-radius(16px);
+        text-align: center  !important;
+        span{
+            margin: 1px !important;
+        }
+    }    
+    .ui-dialog-titlebar-close:hover{
+        color: #fff;
+    }
 }
 .ui-dialog-buttonpane,
 .ui-dialog-titlebar{
@@ -216,15 +239,7 @@ a.on#_WireTabDelete{
     opacity: 0.8;
     z-index: 10000 !important;
 }
-.ui-dialog-titlebar-close{
-    width: auto !important;
-    right: 8px !important;
-    .border-radius(16px);
-    text-align: center  !important;
-    span{
-        margin: 1px !important;
-    }
-}
+
 #select_images{
 
     li{

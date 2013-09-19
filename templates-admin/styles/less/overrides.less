@@ -36,8 +36,6 @@
 }
 
 #wrapper #fieldgroupContext{
-	top: 25px !important;
-	right: 11px ;
 	label{
 		text-transform: uppercase;
 		font-weight: bold;
@@ -104,9 +102,27 @@
 	margin-top: 1em;
 }
 
-.labelIcon{
-	display: none;
+#content label.ui-widget-header .labelIcon{
+
+	margin:  0 0.6em 0 0 !important;
+	padding: 0 0.6em 0 0 !important;
+	display: block !important;
+	top: -0.1em !important;
+	color: @base !important;
 }
+#content label.ui-widget-header .labelIcon:after{
+	content: " ";
+}
+a.fieldFlag,
+a.templateFlag{
+	color: @base;
+	padding: 0 0 0 0.5em;
+}
+a.fieldFlag:hover,
+a.templateFlag:hover{
+	color: @orange !important;
+}
+
 
 #head_button{
 	// float: right;
@@ -129,4 +145,42 @@
 }
 #content > h2{
 	display: none;
+}
+
+
+// overriding ui-sortable individually because..... .. . .?
+.InputfieldPageListSelectMultiple ol li,
+#content .InputfieldPageAutocomplete ol li,
+.Inputfields .asmListItem{
+	background: #fff !important;
+	margin-bottom: 0.2em !important;
+}
+#content .InputfieldPageAutocomplete ol li:hover,
+.Inputfields .asmListItem:hover{
+	background: @orange !important;
+}
+.asmListItemLabel, .asmListItemStatus,
+.InputfieldPageListSelectMultiple ol li .itemLabel,
+#content .InputfieldPageAutocomplete ol li .itemLabel{
+	padding: 0.5em 0.6em !important;
+}
+.asmListItemRemove,
+#content .InputfieldPageAutocomplete ol li .itemRemove{
+	padding: 0.4em !important;
+}
+
+.asmListItemRemove:hover,
+#content .InputfieldPageAutocomplete ol li .itemRemove:hover{
+	color: @base !important;
+}
+
+span.asmListItemDesc{
+	padding: 0.5em 0 !important;
+}
+span.asmListItemStatus{
+	padding: 0.5em 0 !important;
+	.ui-icon {
+		top: 0.1em;
+		padding: 0 0.2em;
+	}
 }

@@ -7,6 +7,7 @@
     text-indent: 0; 
     /* Bump it up - jQuery UI is -8px */
     margin-top: -0.5em;
+
     vertical-align: middle;
     /*height: 1em;*/
     /*width: 1em;*/
@@ -73,6 +74,7 @@
   /*display: block !important;*/
   /*height: 1em;*/
   /*width: 1em;*/
+  font-size: 18px;
   speak: none;
 }
 /* makes the font 33% larger relative to the icon container */
@@ -453,6 +455,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-ok:before {
   content: "\f00c";
 }
+.ui-icon-closethick:before,
 .ui-icon-remove:before {
   content: "\f00d";
 }
@@ -474,14 +477,14 @@ a .ui-icon-flip-vertical:before {
   content: "\f013";
 }
 .ui-icon-trash{
- height: 0;
- width: 0;
+ /*height: 0;*/
+ /*width: 0;*/
  overflow: hidden;
  font-size: 0;
 }
 .ui-icon-trash:before {
   content: "\f014";
-  font-size: 16px;
+  
 }
 .ui-icon-home:before {
   content: "\f015";
@@ -489,6 +492,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-file-alt:before {
   content: "\f016";
 }
+.ui-icon-clock:before,
 .ui-icon-time:before {
   content: "\f017";
 }
@@ -647,6 +651,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-stop:before {
   content: "\f04d";
 }
+.ui-icon-seek-next:before,
 .ui-icon-forward:before {
   content: "\f04e";
 }
@@ -702,6 +707,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-arrow-right:before {
   content: "\f061";
 }
+.ui-icon-arrowreturnthick-1-s:before,
 .ui-icon-arrow-up:before {
   content: "\f062";
 }
@@ -1060,6 +1066,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-lightbulb:before {
   content: "\f0eb";
 }
+.ui-icon-transferthick-e-w:before,
 .ui-icon-exchange:before {
   content: "\f0ec";
 }
@@ -1331,6 +1338,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-level-down:before {
   content: "\f149";
 }
+.ui-icon-circle-check:before,
 .ui-icon-check-sign:before {
   content: "\f14a";
 }
@@ -1461,6 +1469,7 @@ a .ui-icon-flip-vertical:before {
 .ui-icon-long-arrow-down:before {
   content: "\f175";
 }
+
 .ui-icon-long-arrow-up:before {
   content: "\f176";
 }
